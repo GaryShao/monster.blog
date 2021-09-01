@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Monster.PersonalSpace.Blog/Monster.PersonalSpace.Blog.csproj", "Monster.PersonalSpace.Blog/"]
+COPY ["./Monster.PersonalSpace.Blog.csproj", "Monster.PersonalSpace.Blog/"]
 RUN dotnet restore "Monster.PersonalSpace.Blog/Monster.PersonalSpace.Blog.csproj"
 COPY . .
 WORKDIR "/src/Monster.PersonalSpace.Blog"
